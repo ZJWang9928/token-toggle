@@ -8,7 +8,7 @@ py << EndOfPython
 from token_toggle import token_toggle
 
 # get token under cursor
-token_under_cursor = vim.eval('expend("<cword>")')
+token_under_cursor = vim.eval('expand("<cword>")')
 
 if len(token_under_cursor):
     toggled_token = token_toggle(token_under_cursor)
