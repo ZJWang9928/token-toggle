@@ -1,6 +1,6 @@
 # token-toggle
 
-Vim plugin to toggle all kinds of tokens.  
+Vim plugin to toggle frequently used pairs of tokens.   
 
 ## List of current supported token
 
