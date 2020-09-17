@@ -1,6 +1,6 @@
 python import sys
 python import vim
-python sys.path.append(vim.eval('expand("<sfile>:h")')
+python sys.path.append(vim.eval('expand("<sfile>:h")'))
 
 function! TokenToggle()
 py << EndOfPython
