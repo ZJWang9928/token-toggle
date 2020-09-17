@@ -10,10 +10,13 @@ from token_toggle import token_toggle
 # get token under cursor
 token_under_cursor = vim.eval('expand("<cword>")')
 
-if len(token_under_cursor):
+len_of_token = len(token_under_cursor)
+
+if len_of_token:
     toggled_token = token_toggle(token_under_cursor)
     vim.command('normal viwc%s' % toggled_token)
-    vim.command('normal b')
+    if len_of_token > 1:
+        vim.command('normal b')
 
 EndOfPython
 endfunction
