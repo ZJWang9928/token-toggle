@@ -2,6 +2,16 @@ python import sys
 python import vim
 python sys.path.append(vim.eval('expand("<sfile>:h")'))
 
+function! TokenAdd(token1, token2)
+py << EndOfPython
+
+from token_toggle import add_token
+
+add_token(token1, token2)
+
+EndOfPython
+endfunction
+
 function! TokenToggle()
 py << EndOfPython
 
@@ -22,3 +32,5 @@ EndOfPython
 endfunction
 
 command! TokenToggle call TokenToggle()
+
+command! -nargs=2 TokenAdd call TokenAdd(<args>)
