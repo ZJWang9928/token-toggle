@@ -33,4 +33,4 @@ endfunction
 
 command! TokenToggle call TokenToggle()
 
-command! -nargs=2 TokenAdd call TokenAdd(<args>)
+command! -nargs=+ TokenAdd call TokenAdd(<args>)
