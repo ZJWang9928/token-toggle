@@ -3,34 +3,6 @@ import json
 with open("./tokens.json", "r") as f:
     token_pairs = json.load(f)
 
-#  token_pairs = {
-        #  'true': 'false',
-        #  'false': 'true',
-        #  'yes': 'no',
-        #  'no': 'yes',
-        #  '1': '0',
-        #  '0': '1',
-        #  'on': 'off',
-        #  'off': 'on',
-        #  '==': '!=',
-        #  '!=': '==',
-        #  '>': '<=',
-        #  '<=': '>',
-        #  '<': '>=',
-        #  '>=': '<',
-        #  '+': '-',
-        #  '-': '+',
-        #  '*': '/',
-        #  '/': '*',
-        #  }
-
-def add_token(token1, token2):
-    token_pairs[token1] = token2
-    token_pairs[token2] = token1
-    with open("./tokens.json", "w") as f:
-        json.dump(token_pairs, f)
-        print("Token Added Successfully.")
-
 def format_token(word, toggled_word):
     if word.isupper():
         toggled_word = toggled_word.upper()
