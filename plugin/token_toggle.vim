@@ -33,4 +33,4 @@ endfunction
 
 command! TokenToggle call TokenToggle()
 
-command! -nargs=+ TokenAdd <token1> <token2> call TokenAdd(<args>)
+command! -nargs=+ TokenAdd <token1> <token2> call TokenAdd(<q-args>)
